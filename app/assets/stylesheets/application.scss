@@ -6,3 +6,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+/* Navbar */
+.navbar {
+  margin-bottom:0;
+  border:none;
+  border-bottom:5px solid green;
+  border-radius: 0;
+
+  .navbar-brand {
+    color: green;
+    font-weight:bold;
+  }
+}
+
+/* Error Notifications */
+
+.alert {
+  margin-top:5px;
+  margin-bottom: 5px;
+  border-radius: 0;
+  padding:15px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.alert-success, .alert-warning {
+  padding:15px;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0;
+}

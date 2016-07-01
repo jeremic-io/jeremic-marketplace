@@ -12,6 +12,23 @@
   <header class="main-header">
     <%= render 'shared/main_menu' %>
   </header>
+  <div class="container">
+    <!-- Notifications Area -->
+    <div class="notifications">
+      <% if notice %>
+        <div class="alert alert-success">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <p><%= notice %></p>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <p><%= alert %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
   <%= yield %>
 
