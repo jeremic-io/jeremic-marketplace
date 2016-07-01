@@ -21,6 +21,7 @@ gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'puma'
 gem 'devise'
+gem 'paperclip', '~> 5.0.0'
 
 
 group :development, :test do
