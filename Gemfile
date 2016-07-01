@@ -20,6 +20,7 @@ gem 'rails_12factor'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'puma'
 
 
 group :development, :test do
