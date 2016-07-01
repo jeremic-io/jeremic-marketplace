@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Ruby version #
+ruby '2.3.1'
+
 
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
@@ -13,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # App specific gems #
 gem 'figaro'
+gem 'rails_12factor'
 
 
 group :development, :test do
