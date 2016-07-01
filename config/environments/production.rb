@@ -84,7 +84,7 @@ Rails.application.configure do
     bucket: ENV.fetch('s3_bucket'),
     access_key_id: ENV.fetch('s3_access_key'),
     secret_access_key: ENV.fetch('s3_secret_key'),
-    s3_region: NV.fetch('s3_region'),
+    s3_region: ENV.fetch('s3_region'),
   }
 }
 end
