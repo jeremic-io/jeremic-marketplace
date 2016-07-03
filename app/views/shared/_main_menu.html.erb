@@ -16,6 +16,11 @@
             <i class="fa fa-home"></i> Home
           <% end %>
         </li>
+        <li>
+          <%= link_to categories_path do %>
+            <i class="fa fa-bars"></i> Categories
+          <% end %>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>

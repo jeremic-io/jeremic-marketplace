@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="categories">
+    <div class="row">
+      <% @categories.each do |c| %>
+        <div class="col-lg-12">
+          <h3>
+            <%= link_to c.title, c %>
+          </h3>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
