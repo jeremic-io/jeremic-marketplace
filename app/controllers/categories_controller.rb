@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
     @categories = Category.all.order('title ASC')
@@ -9,7 +10,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
   end
 
   def create
@@ -25,11 +25,9 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
 
     if @category.update(category_params)
       flash[:notice] = "Category has been updated."
@@ -44,7 +42,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category.destroy
     flash[:notice] = "Category has been deleted."
-    redirect_to categories_path 
+    redirect_to categories_path
   end
 
   private
@@ -53,4 +51,10 @@ class CategoriesController < ApplicationController
       params.require(:category).permit(:title, :description)
     end
 
+    def set_category
+      @category = Category.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The category you were looking for could not be found."
+      redirect_to categories_path
+    end
 end
