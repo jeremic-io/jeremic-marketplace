@@ -23,6 +23,7 @@ gem 'puma'
 gem 'devise'
 gem 'paperclip', '~> 5.0.0'
 gem 'aws-sdk', '~> 2.3'
+gem 'data-confirm-modal'
 
 
 group :development, :test do

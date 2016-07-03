@@ -8,4 +8,5 @@
   <%= @category.description %>
   <br>
   <%= link_to "Edit", edit_category_path(@category), class:"btn btn-info" %>
+  <%= link_to "Delete", category_path(@category), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
 </div>
