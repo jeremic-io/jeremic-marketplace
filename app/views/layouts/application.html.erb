@@ -2,7 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JeremicMarketplace</title>
+  <title>
+    <% if content_for?(:title) %>
+      <%= yield(:title) %>
+    <% else %>
+      Jeremic Marketplace 
+    <% end %>
+  </title>
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>
   <meta name=viewport content="width=device-width, initial-scale=1">
