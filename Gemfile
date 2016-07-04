@@ -24,6 +24,7 @@ gem 'devise'
 gem 'paperclip', '~> 5.0.0'
 gem 'aws-sdk', '~> 2.3'
 gem 'data-confirm-modal'
+gem 'friendly_id', '~> 5.1.0'
 
 
 group :development, :test do

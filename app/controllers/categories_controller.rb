@@ -39,7 +39,6 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
     flash[:notice] = "Category has been deleted."
     redirect_to categories_path
@@ -52,7 +51,7 @@ class CategoriesController < ApplicationController
     end
 
     def set_category
-      @category = Category.find(params[:id])
+      @category = Category.friendly.find(params[:id])
       rescue ActiveRecord::RecordNotFound
       flash[:alert] = "The category you were looking for could not be found."
       redirect_to categories_path
